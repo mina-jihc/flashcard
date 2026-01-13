@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flashcard App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #fff6ea;
+    }
+
+    /* Header */
+    .header {
+      max-width: 1000px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+    }
+    .header .top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: bold;
+    }
+    .top2 {
+      border: 2px solid black;
+      border-radius: 18px;
+      padding: 4px 12px;
+      background-color: white;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .study {
+      background-color: orange;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    /* Container */
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    /* Left side */
+    .left-side {
+      background-color: palegreen;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .left-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topp {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .category {
+      border-radius: 15px;
+      border: 2px solid black;
+      padding: 5px 10px;
+      background-color: white;
+      font-weight: bold;
+    }
+
+    .left-center {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .left-center h2 {
+      margin: 10px 0;
+      font-size: 22px;
+    }
+
+    .left-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Buttons */
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+
+    /* Right side */
+    .right-side {
+      background-color: #0077cc;
+      color: white;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .right-card {
+      background-color: white;
+      color: black;
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .right-card h3 {
+      margin: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .left-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .top2 {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+      }
+      .left-bottom {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="top">
+      <img src="flash-card.png" alt="icon" width="20" height="20" />
+      <strong>Flashcard</strong>
+    </div>
+    <div class="top2">
+      <strong class="study">Study Mode</strong>
+      <strong>All Cards</strong>
+    </div>
+  </div>
+
+  <!-- Main container -->
+  <div class="container">
+    <!-- Left side -->
+    <div class="left-side">
+      <div class="left-top">
+        <div class="topp">
+          <p class="category">All Categories</p>
+          <label><input type="checkbox" /> Hide Mastered</label>
+        </div>
+        <p>Shuffle</p>
+      </div>
+
+      <div class="left-center">
+        <p>Web Development</p>
+        <h2>What does HTML stand for?</h2>
+        <p>Click to reveal answer</p>
+        <p>0/5</p>
+      </div>
+
+      <div>
+        <button>I Know This</button>
+        <button>Reset Progress</button>
+      </div>
+
+      <div class="left-bottom">
+        <button>Previous</button>
+        <p>Card 1 of 40</p>
+        <button>Next</button>
+      </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="right-side">
+      <h3>Study Statistics</h3>
+      <div class="right-card">
+        <p>Total Cards</p>
+        <h3>40</h3>
+      </div>
+      <div class="right-card">
+        <p>Mastered</p>
+        <h3>11</h3>
+      </div>
+      <div class="right-card">
+        <p>In Progress</p>
+        <h3>21</h3>
+      </div>
+      <div class="right-card">
+        <p>Not Started</p>
+        <h3>8</h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+@media screen and (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML,CSS</title>
+</head>
+<body>
+    <style>
+        body {
+            /*display: flex;
+            align-items: center;
+            justify-content: center;*/
+            margin: 0;
+            background-color: rgb(255, 246, 234);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            /*gap: 500px;*/
+            margin: 50px auto;
+            justify-content: space-between;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: "left-side left-side right-side";
+            width: 1000px;
+            height: 500px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 15px;
+            gap: 30px;
+            margin: 50px auto;
+        }
+        .left-side {
+            display: grid;
+            grid-area: left-side;
+            background-color: palegreen;
+            border-radius: 15px;
+        }
+        .right-side {
+            background-color: blue;
+            display: grid;
+            grid-area: right-side;
+            border-radius: 15px;
+        }
+        @media screen and (max-width: 450px) {
+            .container {
+                grid-template-areas: "left-side"
+                                     "right-side";
+
+            }
+        }
+    </style>
+    <div class="header">
+        <div class="top">
+        <img src="flash-card.png" alt="" width="20px" height="20px">
+        <strong>Flashcard</strong>
+        </div>
+        <div class="top2">
+            <strong>Study Mode</strong>
+            <strong>All Cards</strong>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left-side">
+            <div class="left-top">
+            <p>All Categories</p>
+            <label>
+                <input type= "checkbox">
+            </label>
+            <p>Hide Mastered</p>
+            <p>Shuffle</p>
+            </div>
+            <div class="left-center">
+                <p>Web Development</p>
+                <h1>What does HTML stand for?</h1>
+                <p>Click to reveal answer</p>
+                <p></p>
+                <p>0/5</p>
+            </div>
+            <button>I Know This</button>
+            <button>Reset Progress</button>
+            <div class="left-bottom">
+            <button>Previous</button>
+            <p>Card 1 of 40</p>
+            <button>Next</button>
+            </div>
+        </div>
+        <div class="right-side">
+            <h4>Study Statistics</h4>
+            <div class="right-card">
+                <div class="card-word">
+                    <p>Total Cards</p>
+                    <h3>40</h3>
+                </div>
+                <img src="" alt="" width="40px" height="50px">
+            </div>
+            <div class="right-card">
+                <div class="card-word">
+                    <p>Mastered</p>
+                    <h3>11</h3>
+                </div>
+                <img src="" alt="" width="40px" height="50px">
+            </div>
+            <div class="right-card">
+                <div class="card-word">
+                    <p>In Progress</p>
+                    <h3>21</h3>
+                </div>
+                <img src="" alt="" width="40px" height="50px">
+            </div>
+            <div class="right-card">
+                <div class="card-word">
+                    <p>Not Started</p>
+                    <h3>8</h3>
+                </div>
+                <img src="" alt="" width="40px" height="50px">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
